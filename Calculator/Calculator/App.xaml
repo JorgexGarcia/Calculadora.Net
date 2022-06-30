@@ -1,0 +1,37 @@
+﻿<Application x:Class="Calculator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Calculator"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="numberColors" Color="#666666"/>
+        <SolidColorBrush x:Key="operatorColors" Color="LightGreen"/>
+        <SolidColorBrush x:Key="addicionalColors" Color="LightGray"/>
+        <SolidColorBrush x:Key="foreGroundColor" Color="White"/>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="VerticalAlignment" Value="bottom"/>
+            <Setter Property="HorizontalAlignment" Value="right"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="buttonStyle">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="{StaticResource foreGroundColor}"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="operatorsButtonStyles" BasedOn="{StaticResource buttonStyle}">
+            <Setter Property="Background" Value="{StaticResource operatorColors}"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="numbersButtonStyles" BasedOn="{StaticResource buttonStyle}">
+            <Setter Property="Background" Value="{StaticResource numberColors}"/>
+        </Style>
+        
+        <Style TargetType="Button" x:Key="addionalsButtonStyles" BasedOn="{StaticResource buttonStyle}">
+            <Setter Property="Background" Value="{StaticResource addicionalColors}"/>
+            <Setter Property="Foreground" Value="black"/>
+        </Style>
+    </Application.Resources>
+</Application>
